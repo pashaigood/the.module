@@ -1,0 +1,21 @@
+{
+  "name": "the.module",
+  "version": "0.0.1",
+  "authors": [
+    "PBelugin <pashaigood@gmail.com>"
+  ],
+  "description": "module factory from the js",
+  "main": "release/the.module.js",
+  "keywords": [
+    "the.js",
+    "the.module"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
