@@ -42,13 +42,13 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'src/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
+                src: 'src/*.js',
+                dest: 'release/<%= pkg.name %>.js'
             }
         }
     });
 
     // Default task(s).
     grunt.registerTask('default', ['connect:livereload', 'watch']);
-
+    grunt.registerTask('build', ['uglify:build']);
 };

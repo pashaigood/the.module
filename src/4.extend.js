@@ -30,13 +30,14 @@ the.extend = function(Child, Parent, as_object/*, no_super*/) {
         Child._supers = Child._supers || [];
         Child._supers.push(Parent);
         Child.prototype.Super = function() {
+            var self = this;
             for (var parent in Child._supers) {
                 if (! Child._supers.hasOwnProperty(parent)) continue;
-                this.Super = Child._supers[parent].prototype.Super; 
-                Child._supers[parent].apply(this, arguments);
+                self.Super = Child._supers[parent].prototype.Super;
+                Child._supers[parent].apply(self, arguments);
             }
-            
-            this.Super = function(){};
+
+            self.Super = function(){};
         }
 
     } else {

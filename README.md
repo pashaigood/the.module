@@ -47,7 +47,8 @@ the.module({
         @constructor
         **/
         TestClass: function() {
-            //Вызов слех конструкторов родителей
+            //Вызов всех родительских конструкторов
+            //Calling all parent constructors
             this.Super();
         }
     }
@@ -58,7 +59,8 @@ Description of properties and methods.
 ```javascript
 the.module({
     TestClass: {
-        //Статичние свойства и методы
+        //Статические свойства и методы
+        //Static properties and methods
         our: {
             NUMB: 1,
             hello: functino() {
