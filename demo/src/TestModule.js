@@ -10,6 +10,7 @@ var module = the.module({
 
         Test: function() {
             console.log('new Test');
+            console.log('NUMBER IS', this.our.NUMBER);
             console.log('');
         },
 
@@ -34,7 +35,7 @@ var module2 = the.module({
         ExtendTest: function() {
             console.log('ExtendTest')
             console.log('STRING IS', this.our.STRING);
-            console.log('NUMBER IS', this.our.NUMBER);
+            console.log('EXTENDED NUMBER IS', this.our.NUMBER);
             console.log('');
         }
     }
@@ -42,4 +43,4 @@ var module2 = the.module({
 
 var test = new module.Test(),
     test2 = new module.Test2(),
-    extendTest = new module2.ExtendTest();
+    extendTest = new module2();
